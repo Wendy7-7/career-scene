@@ -1,4 +1,4 @@
-<!-- index.html（完整替换） -->
+<!-- question.html（完整替换） -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,15 +156,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let div = document.createElement("div");
     div.className = "card p-3 mb-3 shadow-sm";
 
-    // 构建选项HTML：自动根据选项索引计算分数（最高分=选项个数，依次递减）
+    // 构建选项HTML：每个选项的 data-score 都设为 1
     const optionsHTML = (q.options_en || []).map((optEn, index) => {
-      const score = (q.options_en.length - index); // 第一个选项得分最高
       return `
         <div style="margin-bottom: 8px;">
           <span class="option-item badge bg-light p-2"
                 style="color: #000 !important;"
                 data-tag="${q.tag || '未知'}"
-                data-score="${score}">
+                data-score="1">
             ${optEn}
           </span>
           <span style="color: #000; font-size: 0.8em; display: block; margin-top: 5px;">
@@ -199,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
       currentOption.classList.add("active");
       answers[pid] = {
         tag: currentOption.dataset.tag,
-        score: parseInt(currentOption.dataset.score) || 0
+        score: 1  // 每个选项1分
       };
     }
     // 所有题都答完才启用提交按钮
