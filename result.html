@@ -115,14 +115,11 @@
         }
         const matchedPersonality = PERSONALITY_DATA[topTag] || PERSONALITY_DATA["逻辑"];
 
-        const tagLabels = Object.keys(userTags);
-        const paddedLabels = tagLabels.map(label => label + '   ');
-
         const ctx = document.getElementById('radarChart').getContext('2d');
         new Chart(ctx, {
             type: 'radar',
             data: {
-                labels: paddedLabels,
+                labels: Object.keys(userTags),
                 datasets: [{
                     label: '你的得分',
                     data: Object.values(userTags),
@@ -142,15 +139,12 @@
                         beginAtZero: true,
                         max: Math.max(...Object.values(userTags)) + 5,
                         ticks: {
-                            stepSize: 2,
-                            font: { size: 10 },
-                            backdropColor: 'transparent',
-                            z: 1
+                            display: false
                         },
                         pointLabels: {
-                            font: { size: 11, weight: 'bold' },
+                            font: { size: 12, weight: 'bold' },
                             color: '#1e293b',
-                            padding: 12
+                            padding: 10
                         },
                         angleLines: { color: 'rgba(0,0,0,0.1)' },
                         grid: { color: 'rgba(0,0,0,0.1)' }
