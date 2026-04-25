@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>职业人格数据库 - CareerLeap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f8fafc; color: #1e293b; }
+        .navbar { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; }
+        .container-custom { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+        .table th { background: #2563eb; color: white; }
+        .table td { vertical-align: middle; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">📘 CareerLeap</a>
+            <div>
+                <a href="index.html" class="btn btn-outline-secondary btn-sm me-2">🏠 Home</a>
+                <a href="question.html" class="btn btn-outline-primary btn-sm">📝 开始测评</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-custom">
+        <h1 class="mb-4">📊 职业人格数据库</h1>
+        <p class="text-muted mb-4">本数据库展示了 8 种职业人格类型及其对应的推荐职业方向。</p>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>人格名称</th>
+                        <th>特质描述</th>
+                        <th>适配原因</th>
+                        <th>推荐职业</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>逻辑分析型</strong></td>
+                        <td>思维缜密理性，擅长拆解复杂问题，注重数据与逻辑，做事严谨有条理</td>
+                        <td>天生擅长理性复盘、数据核算、规律研判，和金融审计、数据分析、技术编程岗位完美匹配</td>
+                        <td>数据分析师、软件工程师、审计师、金融分析师</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>社交沟通型</strong></td>
+                        <td>擅长表达共情，热衷与人打交道，团队协作力强，擅长维护关系与协调沟通</td>
+                        <td>天生擅长人际交往、共情说服、资源对接，和市场销售、公关HR、商务顾问类岗位完美契合</td>
+                        <td>人力资源专员、市场营销专员、公关专员、销售顾问</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>创意艺术型</strong></td>
+                        <td>想象力丰富，追求独特创新，反感刻板流程，擅长用灵感打造个性化内容与作品</td>
+                        <td>天生不受条条框框束缚，擅长审美创作、新鲜策划、内容革新，是设计、文案编导类岗位的天赋型人选</td>
+                        <td>平面设计师、文案策划、新媒体编导、艺术指导</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>务实执行型</strong></td>
+                        <td>动手能力突出，注重实际落地，擅长解决具象问题，做事踏实高效、执行力拉满</td>
+                        <td>天生偏爱动手实干、问题落地解决、硬核技术钻研，完美适配工程建筑、医护实操、技术运维等实干类岗位</td>
+                        <td>机械工程师、建筑工程师、护士、技术支持工程师</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><strong>统筹领导型</strong></td>
+                        <td>有全局视野，擅长决策规划，具备组织管理能力，愿意承担责任、带领团队推进目标</td>
+                        <td>天生自带领袖格局、全局统筹思维与带队决策天赋，和项目管理、企业运营、管培管理层岗位高度匹配</td>
+                        <td>企业管理培训生、项目主管、运营经理、行政总监</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><strong>探索研究型</strong></td>
+                        <td>好奇心极强，热衷钻研未知领域，喜欢深度思考与学术探索，追求专业领域的深度突破</td>
+                        <td>天生好奇心强、偏爱深度学术钻研、专注长期专项探索，完全适配科研实验、专利研发、学术编辑等研究类职业</td>
+                        <td>科研研究员、实验室技术员、学术编辑、专利分析师</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><strong>共情服务型</strong></td>
+                        <td>内心细腻温暖，善于体察他人情绪，乐于帮助他人，适合从事关怀类、服务类工作</td>
+                        <td>天生共情力拉满、温柔耐心擅长治愈陪伴，和心理咨询、早教教育、健康社工等关怀助人类职业内核完全契合</td>
+                        <td>心理咨询师、社会工作者、早教老师、健康管理师</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><strong>规划细节型</strong></td>
+                        <td>做事细致周全，擅长规划统筹，注重流程规范，能精准把控细节、规避疏漏</td>
+                        <td>天生细心缜密、守规矩重流程、擅长细节风控账目统筹，完美适配财务会计、行政档案、供应链合规等规整类岗位</td>
+                        <td>财务会计、行政文员、档案管理员、供应链专员</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="text-muted mt-3">* 数据来源：CareerLeap 职业人格-职业推荐数据库</p>
+    </div>
+</body>
+</html>
