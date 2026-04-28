@@ -2,23 +2,26 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>职业人格数据库 - CareerLeap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f8fafc; color: #1e293b; }
         .navbar { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; }
         .container-custom { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
-        .table th { background: #2563eb; color: white; }
+        .table th { background: #2563eb; color: white; font-weight: 500; }
         .table td { vertical-align: middle; }
+        .section-title { font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem; color: #0f172a; }
+        .source-note { font-size: 0.85rem; color: #64748b; margin-top: 1.5rem; line-height: 1.6; }
+        .table-responsive { overflow-x: auto; }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">📘 CareerLeap</a>
-            <div>
-                <a href="index.html" class="btn btn-outline-secondary btn-sm me-2">🏠 Home</a>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-outline-secondary btn-sm me-2">🏠 首页</a>
                 <a href="question.html" class="btn btn-outline-primary btn-sm">📝 开始测评</a>
             </div>
         </div>
@@ -26,8 +29,10 @@
 
     <div class="container-custom">
         <h1 class="mb-4">📊 职业人格数据库</h1>
-        <p class="text-muted mb-4">本数据库展示了 8 种职业人格类型及其对应的推荐职业方向。</p>
+        <p class="text-muted mb-4">本数据库整合了团队自研的8种职业人格类型，以及国际通用的霍兰德RIASEC职业兴趣模型与大五人格模型，为职业测评提供多维度参考。</p>
 
+        <!-- 原有8种人格类型表格 -->
+        <h2 class="section-title">🔬 CareerLeap 职业人格类型</h2>
         <div class="table-responsive">
             <table class="table table-bordered table-hover">
                 <thead>
@@ -99,7 +104,119 @@
                 </tbody>
             </table>
         </div>
-        <p class="text-muted mt-3">* 数据来源：CareerLeap 职业人格-职业推荐数据库</p>
+
+        <!-- 霍兰德RIASEC模型 -->
+        <h2 class="section-title">🌐 霍兰德 RIASEC 职业兴趣模型</h2>
+        <p class="text-muted">基于 John L. Holland (1959) 提出的职业选择理论，该模型将职业兴趣分为六种类型，通过六边形结构展示类型间的关系。</p>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>类型</th>
+                        <th>中文名称</th>
+                        <th>人格特征与兴趣</th>
+                        <th>典型职业方向</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>R</strong> (Realistic)</td>
+                        <td>现实型</td>
+                        <td>喜欢动手操作工具、机器或动物，偏好户外或体力活动，务实且专注</td>
+                        <td>电工、飞行员、机械工程师、消防员、厨师、农艺师</td>
+                    </tr>
+                    <tr>
+                        <td><strong>I</strong> (Investigative)</td>
+                        <td>研究型</td>
+                        <td>善于思考分析，喜欢独立研究，对科学和数学有浓厚兴趣，追求知识深度</td>
+                        <td>科研人员、医生、软件工程师、数据科学家、实验室技术员</td>
+                    </tr>
+                    <tr>
+                        <td><strong>A</strong> (Artistic)</td>
+                        <td>艺术型</td>
+                        <td>富有创造力，喜欢自我表达，追求美感和独特性，偏好非结构化环境</td>
+                        <td>平面设计师、作家、音乐家、摄影师、演员</td>
+                    </tr>
+                    <tr>
+                        <td><strong>S</strong> (Social)</td>
+                        <td>社会型</td>
+                        <td>乐于助人，擅长沟通与教导，关注他人成长和社会发展，富有同理心</td>
+                        <td>教师、心理咨询师、护士、社工、培训师</td>
+                    </tr>
+                    <tr>
+                        <td><strong>E</strong> (Enterprising)</td>
+                        <td>企业型</td>
+                        <td>自信果断，追求成就和影响力，善于领导和说服他人，敢于承担风险</td>
+                        <td>企业家、销售经理、律师、政治家、投资顾问</td>
+                    </tr>
+                    <tr>
+                        <td><strong>C</strong> (Conventional)</td>
+                        <td>常规型</td>
+                        <td>做事有条理，注重细节和规范，喜欢结构和明确的流程，可靠且高效</td>
+                        <td>会计、审计师、银行职员、档案管理员、行政主管</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="text-muted small">▲ 相邻类型（如R-I、I-A）兴趣相似度高；相对类型（如R-S、I-E）差异最大。模型已获跨文化验证 (Tracey & Rounds, 1993)。</p>
+
+        <!-- 大五人格模型 -->
+        <h2 class="section-title">🧠 大五人格模型 (Big Five / OCEAN)</h2>
+        <p class="text-muted">该模型源自 Lewis R. Goldberg (1990) 的研究，将人格归纳为五个核心维度，是目前心理学界最广泛接受的人格框架。具体条目改编自国际人格项目题库 (IPIP)，属于公共领域资源。</p>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>维度 (OCEAN)</th>
+                        <th>中文名称</th>
+                        <th>高分特征描述</th>
+                        <th>适配职业方向</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>O</strong> (Openness)</td>
+                        <td>开放性</td>
+                        <td>好奇心强，富有想象力，喜欢尝试新事物，有审美情趣，思想开放</td>
+                        <td>艺术家、研究员、企业家、广告创意、设计师、旅行作家</td>
+                    </tr>
+                    <tr>
+                        <td><strong>C</strong> (Conscientiousness)</td>
+                        <td>尽责性</td>
+                        <td>自律严谨，做事有条理，注重细节，追求成就，值得信赖</td>
+                        <td>项目经理、外科医生、审计师、工程师、法官、系统管理员</td>
+                    </tr>
+                    <tr>
+                        <td><strong>E</strong> (Extraversion)</td>
+                        <td>外向性</td>
+                        <td>精力充沛，喜欢社交和团队合作，追求刺激，乐观积极</td>
+                        <td>销售经理、政治家、公关专员、导游、主持人、活动策划</td>
+                    </tr>
+                    <tr>
+                        <td><strong>A</strong> (Agreeableness)</td>
+                        <td>宜人性</td>
+                        <td>友善合作，富有同情心，信任他人，避免冲突，乐于助人</td>
+                        <td>社工、心理咨询师、护士、客服经理、教师、调解员</td>
+                    </tr>
+                    <tr>
+                        <td><strong>N</strong> (Neuroticism)</td>
+                        <td>神经质 (情绪稳定性)</td>
+                        <td>情绪敏感，容易焦虑或紧张；<strong>低分者情绪稳定</strong>，能应对高压环境</td>
+                        <td>低分（稳定）者适合：飞行员、急诊医生、消防员、高级管理人员、特种兵</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="text-muted small">▲ 尽责性（Conscientiousness）是预测工作绩效最强的人格维度之一 (Goldberg, 1990)。IPIP 条目完全免费使用，无版权限制。</p>
+
+        <!-- 数据来源声明 -->
+        <div class="source-note mt-4 p-3 bg-light rounded">
+            <strong>📌 数据来源与版权声明</strong><br>
+            • CareerLeap 8种职业人格类型：项目团队基于课程研究原创设计。<br>
+            • 霍兰德 RIASEC 模型：Holland, J. L. (1959). A theory of vocational choice. <em>Journal of Counseling Psychology, 6</em>(1), 35–45. 学术理论框架，不受版权保护。<br>
+            • 大五人格模型：Goldberg, L. R. (1990). An alternative "description of personality": The big-five factor structure. <em>Journal of Personality and Social Psychology, 59</em>(6), 1216–1229. 条目改编自<b>国际人格项目题库 (IPIP)</b> — <a href="https://ipip.ori.org/" target="_blank">https://ipip.ori.org/</a>，该题库为<b>公共领域 (Public Domain)</b> 资源，可自由复制、改编和使用。<br>
+            • 职业名称参考：部分职业名称参考美国劳工部 <b>O\*NET</b> 数据库 (CC BY 4.0) 及国际劳工组织 <b>ISCO-08</b> 标准。
+        </div>
     </div>
 </body>
 </html>
